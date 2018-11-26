@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const Page = styled.div`
   display: flex;
@@ -8,9 +8,9 @@ const Page = styled.div`
   flex-direction: column;
   min-width: fit-content;
   height: 100%;
+  margin-left: 100px;
   width: 100%;
 `;
-
 
 class Paginate extends React.Component {
   constructor() {
@@ -30,7 +30,6 @@ class Paginate extends React.Component {
   }
 
   render() {
-
     const { currentPage, todosPerPage } = this.state;
     const todos = this.props.todos;
     // Logic for displaying todos
@@ -50,9 +49,8 @@ class Paginate extends React.Component {
 
     const renderPageNumbers = pageNumbers.map(number => {
       return (
-
         <li
-          style={{display: 'inline-flex', alignItmes: 'space-between'}}
+          style={{ display: "inline-flex", alignItmes: "space-between" }}
           key={number}
           id={number}
           onClick={this.handleClick}
@@ -64,12 +62,16 @@ class Paginate extends React.Component {
 
     return (
       <Page>
-        <div>
-          {renderTodos}
-        </div>
+        <div>{renderTodos}</div>
         <div
-          style={{display:'flex', width:'250px', flexDirection:'row', justifyContent: 'space-between'}}
-          id="page-numbers">
+          style={{
+            display: "flex",
+            width: "250px",
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}
+          id="page-numbers"
+        >
           {renderPageNumbers}
         </div>
       </Page>

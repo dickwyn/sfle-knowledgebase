@@ -52,19 +52,7 @@ const entSchema = new Schema({
   Longitude: String,
   mainImage: String,
   otherImages: [],
-  isFeatured: Boolean,
-  "Economic Performance Evaluation Rating": Number,
-  "Economic Performance Evaluation Text": String,
-  "Environmental Performance Evaluation Rating": Number,
-  "Environmental Performance Evaluation Text": String,
-  "Human and Social Performance Evaluation Rating": Number,
-  "Human and Social Performance Evaluation Text": String,
-  "Management Evaluation Rating": Number,
-  "Management Evaluation Text": String,
-  "Ownership and Decision Making Evaluation Rating": Number,
-  "Ownership and Decision Making Evaluation Text": String,
-  "Product Evaluation Rating": Number,
-  "Product Evaluation Text": String
+  isFeatured: Boolean
 },
 {
   versionKey: false
